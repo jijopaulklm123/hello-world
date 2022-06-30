@@ -14,7 +14,7 @@ pipeline {
               steps {
                   withAWS(region:'eu-west-1',credentials:'aws-test-id') {
                   sh 'echo "Uploading content with AWS creds"'
-                      s3Download(file:'test.txt', bucket:'amytest123', path:'./file.txt', force:true)
+                      s3Download(file:'test.txt', bucket:'amytest123', path:'./test.txt', force:true)
 					  sh 'ls -ltrh'  
                   }
               }
